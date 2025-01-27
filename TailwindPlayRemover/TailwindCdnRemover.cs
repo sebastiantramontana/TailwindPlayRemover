@@ -21,7 +21,7 @@ public static class TailwindCdnRemover
             return;
         }
 
-        var targetSrc = "https://cdn.tailwindcss.com";
+        const string targetSrc = "https://unpkg.com/@tailwindcss/browser@4";
         var tailwindCdnNode = head!.SelectSingleNode($"//script[@src='{targetSrc}']");
 
         if (tailwindCdnNode is null)
